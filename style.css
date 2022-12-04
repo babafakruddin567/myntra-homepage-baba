@@ -3,6 +3,17 @@ body{
     width: 100%;
     
 }
+i{
+  font-size: 40px;
+  margin-left: 950px;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0d0d0d;
+}
+
 *{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -74,6 +85,7 @@ nav{
 }
 .uppercase{
     text-transform: uppercase;
+    color: #2d2a2a;
 }
 .semibold{
     font-weight: bold;
@@ -81,6 +93,7 @@ nav{
 .mx-2{
     margin-left: 19px;
     margin-right: 12px;
+    color: #2d2a2a;
 }
 .section1{
 
