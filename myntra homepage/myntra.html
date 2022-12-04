@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra shopping</title>
+    <link rel="stylesheet" href="https://www.flaticon.com/free-icons/search">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    
+    <header class="container">
+        <nav class="flex space-between">
+            <div><span class="ham-menu"></span></div>
+            <div class="left flex items-center">
+                
+                <img class="imgm" src="./myntra.webp" alt="myntra logo">
+                <ul class="flex items-center justify-center uppercase semibold">
+                    <li>Women</li>
+                    <li>Men</li>
+                    <li>Kids</li>
+                    <li>Home decor</li>
+                    <li>Cosmotics</li>
+                    <li>Studio</li>
+                </ul>
+            </div>
+            <div class="right flex items-center">
+                <input class="search" type="text" class="desktop-bar" placeholder="search for products brands and more" value="" data-reactid="904"/>
+                <img class="searchimg"src="./searimg.PNG" alt="simg">
+                <div class="Profile mx-2">Profile</div>
+                <div class="Wishlist mx-2">WishList</div>
+                <div class="Add to Bag mx-2">Add to Bag</div>
+            </div>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="./Capturem1.PNG" style="width:1400px" height="600px">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="./Capturem2.PNG" style="width:1400px" height="600px">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="./Capturem3.PNG" style="width:1400px" height="600px">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="./Capturem4.PNG" style="width:1400px" height="600px">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="./Capturem6.PNG" style="width:1400px" height="600px">
+            
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <h1>X</h1>
+            <h2 class="csty">REEDEM COUPON CODE: <span>MYNTRADISC50</span> NOW AND GET DISCOUNT</h2>
+
+            <img class="cimage" src="./couponimg.PNG" alt="cimage">
+            
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+           showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+           showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+           var i;
+           var slides = document.getElementsByClassName("mySlides");
+           var dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";
+           dots[slideIndex-1].className += " active";
+        }
+        const popup = document.querySelector('.popup');
+        const x = document.querySelector('.popup-content h1')
+
+
+        window.addEventListener('load', () => {
+            popup.classList.add('showpopup');
+            popup.childNodes[1].classList.add('showpopup');
+        
+        })
+        window.addEventListener('click', () => {
+            popup.classList.remove('showpopup');
+            popup.childNodes[1].classList.remove('showpopup');
+        
+        })
+        
+     </script>
+    <div>
+        <h2 class="text1">DEAL OF THE DAY</h2>
+    </div>       
+    <div class="containerb">
+        <div class="containerb1">
+            <div class="containerb1a">
+                <img src="./shopping.webp" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Sweatshirts&Trousers</h5>
+<h3>Flat 60% Off</h3>
+        </div>
+        </div>
+        <div class="containerb2">
+            <div class="containerb2a">
+                <img src="./istockphoto-938463764-612x612.jpg" alt="image">
+            </div>
+            <div class="containerb2b">
+<h5>Footwear</h5>
+<h3>Min.60% Off</h3>
+        </div>
+        </div>
+        <div class="containerb3">
+            <div class="containerb1a">
+                <img src="./ethnic wear.webp" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Ethnic Wear</h5>
+<h3>40-70% Off</h3>
+        </div>
+        </div>
+        <div class="containerb4">
+            <div class="containerb1a">
+                <img src="./3_GOWN_TILES.jpg" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Dresses</h5>
+<h3>Under 20B9 899</h3>
+        </div>
+        </div>
+        <div class="containerb5">
+            <div class="containerb1a">
+                <img src="./home furnish.jpg" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Home Furnishing</h5>
+<h3>Up To 60% Off</h3>
+        </div>
+        </div>
+        <div class="containerb6">
+            <div class="containerb1a">
+                <img src="./watches.jpg" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Premium Watches</h5>
+<h3>Extra 10% Off</h3>
+<h6>Code:watches10</h6>
+        </div>
+        </div>
+        <div class="containerb7">
+            <div class="containerb1a">
+                <img src="./per.jpg" alt="image">
+            </div>
+            <div class="containerb1b">
+<h5>Perfumes</h5>
+<h3>Up To 80% Off</h3>
+</div>
+</div>
+
+</div>
+<div>
+    <h2 class="text2">BEST OF MYNTRA EXCLUSIVE BRANDS</h2>
+</div> 
+    <!-- //// -->
+    <div class="containerc">
+        <div class="containerc1">
+            <div class="containerc1a">
+                <img src="./c1m.avif" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Stylish T-Shirts</h5>
+<h3><strike><span>&#8377;</span>899</strike><span>&#8377;299</span></h3>
+        </div>
+        </div>
+        <div class="containerc2">
+            <div class="containerc2a">
+                <img src="./track.webp" alt="image">
+            </div>
+            <div class="containerc2b">
+<h5>Track Pants</h5>
+<h3><strike><span>&#8377;</span>1799</strike><span>&#8377;699</span></h3>
+        </div>
+        </div>
+        <div class="containerc3">
+            <div class="containerc1a">
+                <img src="./jeansvouge.webp" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Tops</h5>
+<h3><strike><span>&#8377;</span>1199</strike><span>&#8377;699</span></h3>
+        </div>
+        </div>
+        <div class="containerc4">
+            <div class="containerc1a">
+                <img src="./Wrangler._SY530_QL85_.jpg" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Jeans</h5>
+<h3><strike><span>&#8377;</span>1699</strike><span>&#8377;699</span></h3>
+        </div>
+        </div>
+        <div class="containerc5">
+            <div class="containerc1a">
+                <img src="./c2m.jpg" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Active Wear</h5>
+<h3><strike><span>&#8377;</span>1299</strike><span>&#8377;599</span></h3>
+        </div>
+        </div>
+        <div class="containerc6">
+            <div class="containerc1a">
+                <img src="./casualshi.webp" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Casual Shirts</h5>
+<h3><strike><span>&#8377;</span>1299</strike><span>&#8377;499</span></h3>
+
+        </div>
+        </div>
+        <div class="containerc7">
+            <div class="containerc1a">
+                <img src="./hand.webp" alt="image">
+            </div>
+            <div class="containerc1b">
+<h5>Handbags</h5>
+<h3><strike><span>&#8377;</span>1599</strike><span>&#8377;999</span></h3>
+        </div>
+        </div>
+        
+    </div>
+    <div>
+        <h2 class="text3">TOP PICKS</h2>
+    </div>  
+    <div class="containerd">
+        <div class="containerd1">
+            <div class="containerd1a">
+                <img src="./dkurtasets.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>Kurta Sets</h5>
+<h3>Under<span>&#8377;1299</span></h3>
+        </div>
+        </div>
+        <div class="containerd2">
+            <div class="containerd2a">
+                <img src="./dkurtas.PNG" alt="image">
+            </div>
+            <div class="containerd2b">
+<h5>Kurtas</h5>
+<h3>Under<span>&#8377;799</span></h3>
+        </div>
+        </div>
+        <div class="containerd3">
+            <div class="containerd1a">
+                <img src="./dcm.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>Dresses</h5>
+<h3>Under<span>&#8377;899</span></h3>
+        </div>
+        </div>
+        <div class="containerd4">
+            <div class="containerd1a">
+                <img src="./djeans.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>Jeans</h5>
+<h3>Under<span>&#8377;999</span></h3>
+        </div>
+        </div>
+        <div class="containerd5">
+            <div class="containerd1a">
+                <img src="./d5m.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>Shirts</h5>
+<h3>Under<span>&#8377;799</span></h3>
+        </div>
+        </div>
+        <div class="containerd6">
+            <div class="containerd1a">
+                <img src="./d6m.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>T Shirts</h5>
+<h3>Under<span>&#8377;599</span></h3>
+
+        </div>
+        </div>
+        <div class="containerd7">
+            <div class="containerd1a">
+                <img src="./d7m.PNG" alt="image">
+            </div>
+            <div class="containerd1b">
+<h5>Trousers</h5>
+<h3>Under<span>&#8377;999</span></h3>
+        </div>
+        </div>
+        
+    </div>
+    <div>
+        <h2 class="text4">CATEGORIES TO BAG</h2>
+    </div>  
+    <div class="containere">
+<div class="containere1">
+    <div class="center1">
+        <img id="imagese" src="./kurtae1.webp" alt="">
+    </div>
+    <div class="containere11">Kurtas</h5></div></div>
+    <div class="containere2">
+        <div class="center2">
+            <img id="imagese" src="./bathroomesse1.jpg" alt="">
+    </div>
+    <div class="containere12">Bathroom Essentials</h5></div></div>
+    <div class="containere3">
+    <div class="center3">
+    <img id="imagese" src="./handbage1.jpg" alt="">
+    </div>
+    <div class="containere13">Handbags</h5></div></div>
+    <div class="containere4">
+    <div class="center4">
+    <img id="imagese" src="./infante1.jpg" alt="">
+    </div>
+    <div class="containere14">Infant Essentials</h5></div></div>
+    <div class="containere5">
+    <div class="center5">
+    <img id="imagese" src="./innerwaree1.webp" alt="">
+    </div>
+    <div class="containere15">Inner Wear</h5></div></div>
+    <div class="containere6">
+    <div class="center6">
+                            <img id="imagese" src="./jwellerye1.jpg" alt="">
+                        </div>
+                        <div class="containere16">Jwellery</h5></div></div>
+                    </div>
+                    <div class="containere">
+                        <div class="containere1">
+                            <div class="center1">
+                                <img id="imagese" src="./watchese1.jpg" alt="">
+                            </div>
+                            <div class="containere11">Watches</h5></div></div>
+                            <div class="containere2">
+                                <div class="center2">
+                                    <img id="imagese" src="./trousere1.webp" alt="">
+                                </div>
+                                <div class="containere12">Trousers</h5></div></div>
+                                <div class="containere3">
+                                    <div class="center3">
+                                        <img id="imagese" src="./shirtse1.jpg" alt="">
+                                    </div>
+                                    <div class="containere13">Shirts</h5></div></div>
+                                    <div class="containere4">
+                                        <div class="center4">
+                                            <img id="imagese" src="./sarreee1.jpg" alt="">
+                                        </div>
+                                        <div class="containere14">Sarees</h5></div></div>
+                                        <div class="containere5">
+                                            <div class="center5">
+                                                <img id="imagese" src="./sportshoee1.jpg" alt="">
+                                            </div>
+                                            <div class="containere15">Sports Wear</h5></div></div>
+                                            <div class="containere6">
+                                                <div class="center6">
+                                                    <img id="imagese" src="./casualshoee1.webp" alt="">
+                                                </div>
+                                                <div class="containere16">Casual Shoes</h5></div></div>
+                                            </div>
+                                            <div class="containere">
+                                                <div class="containere1">
+                                                    <div class="center1">
+                                                        <img id="imagese" src="./topse1.jfif" alt="">
+                                                    </div>
+                                                    <div class="containere11">Tops</h5></div></div>
+                                                    <div class="containere2">
+                                                        <div class="center2">
+                                                            <img id="imagese" src="./flipflope1.jpg" alt="">
+                                                        </div>
+                                                        <div class="containere12">Flip Flops</h5></div></div>
+                                                        <div class="containere3">
+                                                            <div class="center3">
+                                                                <img id="imagese" src="./teenskidse1.jpg" alt="">
+                                                            </div>
+                                                            <div class="containere13">Teen Wear</h5></div></div>
+                                                            <div class="containere4">
+                                                                <div class="center4">
+                                                                    <img id="imagese" src="./beauty.PNG" alt="">
+                                                                </div>
+                                                                <div class="containere14">Beauty</h5></div></div>
+                                                                <div class="containere5">
+                                                                    <div class="center5">
+                                                                        <img id="imagese" src="./tracke1.webp" alt="">
+                                                                    </div>
+                                                                    <div class="containere15">Trackpants</h5></div></div>
+                                                                    <div class="containere6">
+                                                                        <div class="center6">
+                                                                            <img id="imagese" src="./tte1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="containere16">Shirts &Shorts</div></div>
+                                                                    </div>
+<div>
+ <h2 class="text5">COLOURS OF THE SEASON</h2>
+</div>  
+<div class="containerfa">
+    <div class="containerf1">
+        <div class="containerf1a">
+        <img class="fimage" src="./color1.PNG" alt="img"></div>
+        <div class="containerf1b">
+         <div class="textf">
+         Metallic Hues
+         </div>
+         </div>
+    </div>
+    <div class="containerf2">
+        <div class="containerf1a">
+        <img class="fimage" src="./color2.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+         Elegant Olive
+         </div>
+         </div>
+    </div>
+    <div class="containerf3">
+        <div class="containerf1a">
+        <img class="fimage" src="./color3.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+         Cobalt Blue
+         </div>
+         </div>
+    </div>
+    <div class="containerf4">
+        <div class="containerf1a">
+        <img class="fimage" src="./color4.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+         Breezy White
+         </div>
+         </div>
+    </div>
+    </div>
+    <div class="containerfb">
+    <div class="containerf5">
+        <div class="containerf1a">
+        <img class="fimage" src="./c5.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+        Soft Pastels
+        </div>
+         </div>
+    </div>
+    <div class="containerf6">
+        <div class="containerf1a">
+        <img class="fimage" src="./color6.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+         Electric Lime
+         </div>
+         </div>
+    </div>
+    <div class="containerf7">
+        <div class="containerf1a">
+        <img class="fimage" src="./color7.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+        Turquoise Blue
+        </div>
+         </div>
+    </div>
+    <div class="containerf8">
+        <div class="containerf1a">
+        <img class="fimage" src="./color8.PNG" alt="img"></div>
+        <div class="containerf1b">
+            <div class="textf">
+         Coffee Browns
+         </div>
+         </div>
+    </div>
+    
+    </div>
+    <div>
+        <h2 class="text6">DEALS ON TOP BRANDS</h2>
+    </div> 
+    <div class="containerga">
+        <div class="containerg1">
+            <div class="containerg1a">
+                <img src="./g1m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">Up To 50% Off</h3>
+        </div>
+        </div>
+        <div class="containerg2">
+            <div class="containerg2a">
+                <img src="./g2m.PNG" alt="image">
+            </div>
+            <div class="containerg2b">
+
+<h3 class="htext">Up To 50% Off</h3>
+        </div>
+        </div>
+        <div class="containerg3">
+            <div class="containerg1a">
+                <img src="./g3m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">30-70% Off</h3>
+        </div>
+        </div>
+        <div class="containerg4">
+            <div class="containerg1a">
+                <img src="./g4m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">40-60% Off</h3>
+        </div>
+        </div>
+        <div class="containerg5">
+            <div class="containerg1a">
+                <img src="./g5m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">30-60% Off</h3>
+        </div>
+        </div>
+        <div class="containerg6">
+            <div class="containerg1a">
+                <img src="./g6m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">Extra 10% Off</h3>
+
+        </div>
+        </div>
+        <div class="containerg7">
+            <div class="containerg1a">
+                <img src="./g7m.PNG" alt="image">
+            </div>
+            <div class="containerg1b">
+
+<h3 class="htext">Up To 80% Off</h3>
+</div>
+</div>
+
+
+</div>
+
+<div class="containergb">
+    <div class="containerg8">
+        <div class="containerg1a">
+            <img src="./h1m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">Flat 60% Off</h3>
+    </div>
+    </div>
+    <div class="containerg9">
+        <div class="containerg2a">
+            <img src="./h2m.PNG" alt="image">
+        </div>
+        <div class="containerg2b">
+
+<h3 class="htext">Min.50% Off</h3>
+    </div>
+    </div>
+    <div class="containerg10">
+        <div class="containerg1a">
+            <img src="./h3m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">50-70% Off</h3>
+    </div>
+    </div>
+    <div class="containerg11">
+        <div class="containerg1a">
+            <img src="./h4m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">Up To 50% Off</h3>
+    </div>
+    </div>
+    <div class="containerg12">
+        <div class="containerg1a">
+            <img src="./h5m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">Up To 40% Off</h3>
+    </div>
+    </div>
+    <div class="containerg13">
+        <div class="containerg1a">
+            <img src="./h6m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">40-70% Off</h3>
+
+    </div>
+    </div>
+    <div class="containerg14">
+        <div class="containerg1a">
+            <img src="./h7m.PNG" alt="image">
+        </div>
+        <div class="containerg1b">
+
+<h3 class="htext">Up To 30% Off</h3>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+<footer class="containerh">
+        
+<div class="gap">HOME PAGE</div>
+<div class="gap">SETTINGS</div>
+<div class="gap">EXPLORER</div>
+<div class="gap">SERVICE DESK</div>
+<div class="gap">MYNTRA INSIDER</div>
+            
+        </footer>
+        <div class="containerla">
+            <div class="desktop-downLinkContainer" data-reactid="96"><a href="https://play.google.com/store/apps/details?id=com.myntra.android" data-reactid="97"><img class="desktop-androidDownLink" src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png"></a><a href="https://itunes.apple.com/in/app/myntra-indias-fashion-store/id907394059" data-reactid="99"><img class="desktop-iOSDownLink" src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png"></a></div>
+            <div class="desktop-keepInTouch" data-reactid="101"> KEEP IN TOUCH </div>
+            <a href="https://www.facebook.com/myntra" class="desktop-facebook" data-reactid="102"><img  class="linkimg" src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" style="width: 50px; height: 50px;"></a>
+            <a href="https://twitter.com/myntra" class="desktop-twitter" data-reactid="104"><img class="linkimg" src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.youtube.com/user/myntradotcom" class="desktop-youtube" data-reactid="106"><img class="linkimg" src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.instagram.com/myntra" class="desktop-instagram" data-reactid="108"><img class="linkimg" src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" style="width: 50px; height: 50px; position: relative; top: 1px;"></a>
+<div>
+    <h4 class="ph">MYNTRA APP
+        </h4>
+        <p class="pp">
+Myntra, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the Myntra shopping app has managed to keep up without any hiccups. In addition, Myntra has vowed to serve customers to the best of its ability by introducing its first-ever loyalty program, The Myntra Insider. Gain access to priority delivery, early sales, lucrative deals and other special perks on all your shopping with the Myntra app. Download the Myntra app on your Android or IOS device today and experience shopping like never before!
+</p>
+<h4 class="ph">
+HISTORY OF MYNTRA
+</h4>
+<p class="pp">
+Becoming India’s no. 1 fashion destination is not an easy feat. Sincere efforts, digital enhancements and a team of dedicated personnel with an equally loyal customer base have made Myntra the online platform that it is today. The original B2B venture for personalized gifts was conceived in 2007 but transitioned into a full-fledged ecommerce giant within a span of just a few years. By 2012, Myntra had introduced 350 Indian and international brands to its platform, and this has only grown in number each passing year. Today Myntra sits on top of the online fashion game with an astounding social media following, a loyalty program dedicated to its customers, and tempting, hard-to-say-no-to deals.
+
+The Myntra shopping app came into existence in the year 2015 to further encourage customers’ shopping sprees. Download the app on your Android or IOS device this very minute to experience fashion like never before
+</p>
+<h4 class="ph">
+SHOP ONLINE AT MYNTRA WITH COMPLETE CONVENIENCE
+</h4>
+<p class="pp">
+Another reason why Myntra is the best of all online stores is the complete convenience that it offers. You can view your favourite brands with price options for different products in one place. A user-friendly interface will guide you through your selection process. Comprehensive size charts, product information and high-resolution images help you make the best buying decisions. You also have the freedom to choose your payment options, be it card or cash-on-delivery. The 30-day returns policy gives you more power as a buyer. Additionally, the try-and-buy option for select products takes customer-friendliness to the next level.
+
+Enjoy the hassle-free experience as you shop comfortably from your home or your workplace. You can also shop for your friends, family and loved-ones and avail our gift services for special occasions.
+</p>
+</div>
+        </div>
+    
+</body>
+</html>
