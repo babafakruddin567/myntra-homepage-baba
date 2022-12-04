@@ -85,7 +85,7 @@ nav{
 }
 .uppercase{
     text-transform: uppercase;
-    color: #2d2a2a;
+    color: black;
 }
 .semibold{
     font-weight: bold;
@@ -93,7 +93,7 @@ nav{
 .mx-2{
     margin-left: 19px;
     margin-right: 12px;
-    color: #2d2a2a;
+    color: black;
 }
 .section1{
 
